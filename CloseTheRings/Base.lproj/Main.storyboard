@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,106 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CloseTheRings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMH-Qo-dv9">
+                                <rect key="frame" x="8" y="154" width="359" height="359"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2n-UU-fJC" customClass="HKActivityRingView">
+                                        <rect key="frame" x="40" y="40" width="279" height="258.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uw-5j-UaH">
+                                        <rect key="frame" x="0.0" y="318.5" width="359" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6uw-5j-UaH" secondAttribute="bottom" constant="20" id="5zo-Fb-ejW"/>
+                                    <constraint firstAttribute="trailing" secondItem="J2n-UU-fJC" secondAttribute="trailing" constant="40" id="Abj-Hn-CdB"/>
+                                    <constraint firstItem="J2n-UU-fJC" firstAttribute="leading" secondItem="ZMH-Qo-dv9" secondAttribute="leading" constant="40" id="KkW-9V-jI4"/>
+                                    <constraint firstItem="6uw-5j-UaH" firstAttribute="leading" secondItem="ZMH-Qo-dv9" secondAttribute="leading" id="Sk4-MC-0eN"/>
+                                    <constraint firstItem="6uw-5j-UaH" firstAttribute="top" secondItem="J2n-UU-fJC" secondAttribute="bottom" constant="20" id="Xbk-8G-abK"/>
+                                    <constraint firstAttribute="trailing" secondItem="6uw-5j-UaH" secondAttribute="trailing" id="jKg-gK-Q2g"/>
+                                    <constraint firstAttribute="width" secondItem="ZMH-Qo-dv9" secondAttribute="height" multiplier="1:1" id="k6g-fw-k3W"/>
+                                    <constraint firstItem="J2n-UU-fJC" firstAttribute="top" secondItem="ZMH-Qo-dv9" secondAttribute="top" constant="40" id="tDc-mm-e5H"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cC0-Nf-cwE">
+                                <rect key="frame" x="20" y="587" width="335" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02W-e9-SgL" customClass="RoundedButton" customModule="CloseTheRings" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="60"/>
+                                        <color key="backgroundColor" red="0.9767052531" green="0.60546392199999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="vgu-Yj-W6y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Video">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uwk-fM-Rtd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gP8-oU-wpW" customClass="RoundedButton" customModule="CloseTheRings" customModuleProvider="target">
+                                        <rect key="frame" x="177.5" y="0.0" width="157.5" height="60"/>
+                                        <color key="backgroundColor" red="0.9767052531" green="0.60546392199999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="7SH-fA-tWS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="GIF">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="gifButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lUN-dt-1xf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3R-qf-gBs">
+                                <rect key="frame" x="299" y="36" width="60" height="60"/>
+                                <state key="normal" image="Calendar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LcA-ae-jeK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cC0-Nf-cwE" secondAttribute="bottom" constant="20" id="GtF-a2-ZUq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cC0-Nf-cwE" secondAttribute="trailing" constant="20" id="J7D-m7-KR0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZMH-Qo-dv9" secondAttribute="trailing" constant="8" id="adA-wq-OU8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a3R-qf-gBs" secondAttribute="trailing" constant="16" id="dhF-HT-1Fj"/>
+                            <constraint firstItem="ZMH-Qo-dv9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gi9-hD-lCI"/>
+                            <constraint firstItem="a3R-qf-gBs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="hZa-db-GKp"/>
+                            <constraint firstItem="ZMH-Qo-dv9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pTB-oB-TyM"/>
+                            <constraint firstItem="cC0-Nf-cwE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="s7C-Mj-n1S"/>
+                            <constraint firstItem="ZMH-Qo-dv9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="uTP-eS-R9a"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="ZMH-Qo-dv9" id="nga-sJ-apc"/>
+                        <outlet property="dateLabel" destination="6uw-5j-UaH" id="FIc-d4-oFL"/>
+                        <outlet property="ringView" destination="J2n-UU-fJC" id="KfR-gI-hOr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Calendar" width="60" height="60"/>
+    </resources>
 </document>

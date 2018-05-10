@@ -12,6 +12,14 @@
 		CDBDCC2820A42D7600CEEB9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBDCC2620A42D7600CEEB9A /* Main.storyboard */; };
 		CDBDCC2A20A42D7700CEEB9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDBDCC2920A42D7700CEEB9A /* Assets.xcassets */; };
 		CDBDCC2D20A42D7700CEEB9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBDCC2B20A42D7700CEEB9A /* LaunchScreen.storyboard */; };
+		CDBDCC3720A42E1B00CEEB9A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBDCC3620A42E1B00CEEB9A /* HealthKit.framework */; };
+		CDBDCC3920A42E6D00CEEB9A /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC3820A42E6D00CEEB9A /* HealthManager.swift */; };
+		CDBDCC4C20A43A6700CEEB9A /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC4B20A43A6700CEEB9A /* RoundedButton.swift */; };
+		CDBDCC5220A43CCA00CEEB9A /* Glimpse.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC5020A43CCA00CEEB9A /* Glimpse.m */; };
+		CDBDCC5320A43CCA00CEEB9A /* GlimpseAssetWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC5120A43CCA00CEEB9A /* GlimpseAssetWriter.m */; };
+		CDBDCC5620A44B7000CEEB9A /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC5520A44B6F00CEEB9A /* DatePickerDialog.swift */; };
+		CDBDCC5820A4564200CEEB9A /* Regift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC5720A4564200CEEB9A /* Regift.swift */; };
+		CDBDCC5A20A45A1F00CEEB9A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDBDCC5920A45A1F00CEEB9A /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,18 @@
 		CDBDCC2920A42D7700CEEB9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDBDCC2C20A42D7700CEEB9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDBDCC2E20A42D7700CEEB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDBDCC3420A42E1B00CEEB9A /* CloseTheRings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloseTheRings.entitlements; sourceTree = "<group>"; };
+		CDBDCC3620A42E1B00CEEB9A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		CDBDCC3820A42E6D00CEEB9A /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		CDBDCC4B20A43A6700CEEB9A /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		CDBDCC4D20A43CC900CEEB9A /* CloseTheRings-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloseTheRings-Bridging-Header.h"; sourceTree = "<group>"; };
+		CDBDCC4E20A43CC900CEEB9A /* GlimpseAssetWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlimpseAssetWriter.h; sourceTree = "<group>"; };
+		CDBDCC4F20A43CC900CEEB9A /* Glimpse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Glimpse.h; sourceTree = "<group>"; };
+		CDBDCC5020A43CCA00CEEB9A /* Glimpse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Glimpse.m; sourceTree = "<group>"; };
+		CDBDCC5120A43CCA00CEEB9A /* GlimpseAssetWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlimpseAssetWriter.m; sourceTree = "<group>"; };
+		CDBDCC5520A44B6F00CEEB9A /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
+		CDBDCC5720A4564200CEEB9A /* Regift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regift.swift; sourceTree = "<group>"; };
+		CDBDCC5920A45A1F00CEEB9A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDBDCC3720A42E1B00CEEB9A /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +61,7 @@
 			children = (
 				CDBDCC2120A42D7600CEEB9A /* CloseTheRings */,
 				CDBDCC2020A42D7600CEEB9A /* Products */,
+				CDBDCC3520A42E1B00CEEB9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +76,42 @@
 		CDBDCC2120A42D7600CEEB9A /* CloseTheRings */ = {
 			isa = PBXGroup;
 			children = (
+				CDBDCC5520A44B6F00CEEB9A /* DatePickerDialog.swift */,
+				CDBDCC3420A42E1B00CEEB9A /* CloseTheRings.entitlements */,
 				CDBDCC2220A42D7600CEEB9A /* AppDelegate.swift */,
 				CDBDCC2420A42D7600CEEB9A /* ViewController.swift */,
+				CDBDCC5920A45A1F00CEEB9A /* Settings.bundle */,
+				CDBDCC3820A42E6D00CEEB9A /* HealthManager.swift */,
 				CDBDCC2620A42D7600CEEB9A /* Main.storyboard */,
+				CDBDCC5720A4564200CEEB9A /* Regift.swift */,
+				CDBDCC4B20A43A6700CEEB9A /* RoundedButton.swift */,
 				CDBDCC2920A42D7700CEEB9A /* Assets.xcassets */,
 				CDBDCC2B20A42D7700CEEB9A /* LaunchScreen.storyboard */,
 				CDBDCC2E20A42D7700CEEB9A /* Info.plist */,
+				CDBDCC4D20A43CC900CEEB9A /* CloseTheRings-Bridging-Header.h */,
+				CDBDCC5420A43CCF00CEEB9A /* Glimpse */,
 			);
 			path = CloseTheRings;
+			sourceTree = "<group>";
+		};
+		CDBDCC3520A42E1B00CEEB9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDCC3620A42E1B00CEEB9A /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDBDCC5420A43CCF00CEEB9A /* Glimpse */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDCC4F20A43CC900CEEB9A /* Glimpse.h */,
+				CDBDCC5020A43CCA00CEEB9A /* Glimpse.m */,
+				CDBDCC4E20A43CC900CEEB9A /* GlimpseAssetWriter.h */,
+				CDBDCC5120A43CCA00CEEB9A /* GlimpseAssetWriter.m */,
+			);
+			name = Glimpse;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +146,12 @@
 				TargetAttributes = {
 					CDBDCC1E20A42D7600CEEB9A = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDBDCC5A20A45A1F00CEEB9A /* Settings.bundle in Resources */,
 				CDBDCC2D20A42D7700CEEB9A /* LaunchScreen.storyboard in Resources */,
 				CDBDCC2A20A42D7700CEEB9A /* Assets.xcassets in Resources */,
 				CDBDCC2820A42D7600CEEB9A /* Main.storyboard in Resources */,
@@ -135,7 +192,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDBDCC5820A4564200CEEB9A /* Regift.swift in Sources */,
+				CDBDCC4C20A43A6700CEEB9A /* RoundedButton.swift in Sources */,
 				CDBDCC2520A42D7600CEEB9A /* ViewController.swift in Sources */,
+				CDBDCC3920A42E6D00CEEB9A /* HealthManager.swift in Sources */,
+				CDBDCC5320A43CCA00CEEB9A /* GlimpseAssetWriter.m in Sources */,
+				CDBDCC5220A43CCA00CEEB9A /* Glimpse.m in Sources */,
+				CDBDCC5620A44B7000CEEB9A /* DatePickerDialog.swift in Sources */,
 				CDBDCC2320A42D7600CEEB9A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +343,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CloseTheRings/CloseTheRings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CC3KAA4FP8;
 				INFOPLIST_FILE = CloseTheRings/Info.plist;
@@ -289,8 +354,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.patmurraydev.CloseTheRings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CloseTheRings/CloseTheRings-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -298,6 +365,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CloseTheRings/CloseTheRings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CC3KAA4FP8;
 				INFOPLIST_FILE = CloseTheRings/Info.plist;
@@ -307,8 +376,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.patmurraydev.CloseTheRings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CloseTheRings/CloseTheRings-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

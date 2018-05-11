@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QPv-ZK-iz9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CloseTheRings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="CloseTheRings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,13 +87,39 @@
                                     <action selector="dateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LcA-ae-jeK"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4ST-j4-vKc">
+                                <rect key="frame" x="113" y="528" width="149" height="30"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ZJp-Mb-2va">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="30"/>
+                                        <color key="color" red="0.9767052531" green="0.60546392199999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generating X ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irL-Kl-63q">
+                                        <rect key="frame" x="30" y="0.0" width="119" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.9767052531" green="0.60546392199999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aV5-1T-sA2"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ic3-Ht-tgH">
+                                <rect key="frame" x="16" y="36" width="60" height="60"/>
+                                <state key="normal" image="info button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4ST-j4-vKc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3AL-Mh-ZRY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cC0-Nf-cwE" secondAttribute="bottom" constant="20" id="GtF-a2-ZUq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cC0-Nf-cwE" secondAttribute="trailing" constant="20" id="J7D-m7-KR0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZMH-Qo-dv9" secondAttribute="trailing" constant="8" id="adA-wq-OU8"/>
+                            <constraint firstItem="Ic3-Ht-tgH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="axx-w5-IAi"/>
+                            <constraint firstItem="cC0-Nf-cwE" firstAttribute="top" secondItem="4ST-j4-vKc" secondAttribute="bottom" constant="29" id="dYd-B2-uBX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a3R-qf-gBs" secondAttribute="trailing" constant="16" id="dhF-HT-1Fj"/>
+                            <constraint firstItem="Ic3-Ht-tgH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fpu-tX-qHG"/>
                             <constraint firstItem="ZMH-Qo-dv9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gi9-hD-lCI"/>
                             <constraint firstItem="a3R-qf-gBs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="hZa-db-GKp"/>
                             <constraint firstItem="ZMH-Qo-dv9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pTB-oB-TyM"/>
@@ -103,17 +129,122 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activitySpinner" destination="ZJp-Mb-2va" id="Bjj-xR-Pxb"/>
+                        <outlet property="calendarButton" destination="a3R-qf-gBs" id="Fn8-or-jXF"/>
                         <outlet property="containerView" destination="ZMH-Qo-dv9" id="nga-sJ-apc"/>
                         <outlet property="dateLabel" destination="6uw-5j-UaH" id="FIc-d4-oFL"/>
+                        <outlet property="gifButton" destination="gP8-oU-wpW" id="yPc-ne-gXe"/>
+                        <outlet property="infoButton" destination="Ic3-Ht-tgH" id="Riq-kb-ERN"/>
+                        <outlet property="loadingLabel" destination="irL-Kl-63q" id="2D4-qK-JZh"/>
                         <outlet property="ringView" destination="J2n-UU-fJC" id="KfR-gI-hOr"/>
+                        <outlet property="videoButton" destination="02W-e9-SgL" id="tCL-KW-2fr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="639" y="134"/>
+        </scene>
+        <!--Intro View Controller-->
+        <scene sceneID="pMj-ex-FM5">
+            <objects>
+                <viewController id="QPv-ZK-iz9" customClass="IntroViewController" customModule="CloseTheRings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3dE-Xp-xA3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rings" translatesAutoresizingMaskIntoConstraints="NO" id="d4W-fJ-y1v">
+                                <rect key="frame" x="100" y="246" width="175" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d4W-fJ-y1v" secondAttribute="height" multiplier="1:1" id="B6Q-di-raP"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UA4-jR-onE">
+                                <rect key="frame" x="20" y="40" width="335" height="607"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pJ-Zv-Qco">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="72"/>
+                                        <string key="text">Welcome to 
+Share Your Rings</string>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ihh-gV-gmG">
+                                        <rect key="frame" x="0.0" y="216" width="335" height="146.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health Permissions and Your Privacy" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opm-g5-4eX">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jz8-jc-Jtd">
+                                                <rect key="frame" x="0.0" y="65" width="335" height="81.5"/>
+                                                <string key="text">This app requires access to your Activity data from the the Health app to function. I will never transfer your data from your phone.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RDe-9n-32y">
+                                        <rect key="frame" x="0.0" y="506" width="335" height="101"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVb-FE-rgh" customClass="RoundedButton" customModule="CloseTheRings" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
+                                                <color key="backgroundColor" red="0.9767052531" green="0.60546392199999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="BKK-nv-Kel"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Grant Permission">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBH-nX-Htx"/>
+                                                    <action selector="grantPermissionButtonTapped:" destination="QPv-ZK-iz9" eventType="touchUpInside" id="TR8-30-4l2"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enable access for your Activity Health to start sharing" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6j7-Vx-N6K">
+                                                <rect key="frame" x="0.0" y="65" width="335" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.9767052531" green="0.60546392199999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KVO-4M-qD1" firstAttribute="trailing" secondItem="UA4-jR-onE" secondAttribute="trailing" constant="20" id="5ty-XP-s3q"/>
+                            <constraint firstItem="KVO-4M-qD1" firstAttribute="bottom" secondItem="UA4-jR-onE" secondAttribute="bottom" constant="20" id="9LN-1T-d5e"/>
+                            <constraint firstItem="d4W-fJ-y1v" firstAttribute="centerX" secondItem="3dE-Xp-xA3" secondAttribute="centerX" id="Cfp-tP-G33"/>
+                            <constraint firstItem="d4W-fJ-y1v" firstAttribute="centerY" secondItem="3dE-Xp-xA3" secondAttribute="centerY" id="HVO-C3-RE5"/>
+                            <constraint firstItem="d4W-fJ-y1v" firstAttribute="leading" secondItem="3dE-Xp-xA3" secondAttribute="leading" constant="100" id="XHB-gy-RCS"/>
+                            <constraint firstItem="UA4-jR-onE" firstAttribute="leading" secondItem="KVO-4M-qD1" secondAttribute="leading" constant="20" id="qcu-fq-71d"/>
+                            <constraint firstItem="UA4-jR-onE" firstAttribute="top" secondItem="KVO-4M-qD1" secondAttribute="top" constant="20" id="zW5-WW-JIy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KVO-4M-qD1"/>
+                    </view>
+                    <connections>
+                        <outlet property="grantPermissionButton" destination="HVb-FE-rgh" id="CNw-74-Yt6"/>
+                        <outlet property="imageView" destination="d4W-fJ-y1v" id="s8d-Zg-2zY"/>
+                        <outlet property="leadingConstraint" destination="XHB-gy-RCS" id="Tva-SZ-3RR"/>
+                        <outlet property="stackView" destination="UA4-jR-onE" id="5ky-l7-8U3"/>
+                        <outlet property="titleLabel" destination="9pJ-Zv-Qco" id="zk5-J5-iqG"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="startApp" id="JSr-2s-seH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lN2-Kk-00D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500" y="133.5832083958021"/>
         </scene>
     </scenes>
     <resources>
         <image name="Calendar" width="60" height="60"/>
+        <image name="info button" width="60" height="60"/>
+        <image name="rings" width="1024" height="1024"/>
     </resources>
 </document>

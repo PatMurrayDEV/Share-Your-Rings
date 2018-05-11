@@ -27,6 +27,15 @@ class HealthManager: NSObject {
         }
     }
     
+    func checkPermission() -> Bool {
+        return UserDefaults.standard.bool(forKey: "AuthRequested")
+    }
+    
+    func setPermission() {
+        UserDefaults.standard.set(true, forKey: "AuthRequested")
+    }
+    
+    
     func getTodayRing(date: Date = Date(), completion: @escaping (HKActivitySummary) -> Swift.Void)  {
         let calendar = Calendar.autoupdatingCurrent
         

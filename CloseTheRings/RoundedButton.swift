@@ -18,7 +18,7 @@ class RoundedButton: UIButton {
         maskLayer.path = roundedPath.cgPath
         layer.mask = maskLayer
         self.backgroundColor = UIColor(red:0.78, green:0.36, blue:0.16, alpha:1.00)
-        self.contentEdgeInsets = UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10)
+//        self.contentEdgeInsets = UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10)
     }
 
 }

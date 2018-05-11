@@ -34,8 +34,8 @@ open class DatePickerDialog: UIView {
     private var font: UIFont!
 
     // MARK: - Dialog initialization
-    public init(textColor: UIColor = UIColor.black,
-                buttonColor: UIColor = UIColor.blue,
+    public init(textColor: UIColor = UIColor.white,
+                buttonColor: UIColor = UIColor(red:0.78, green:0.36, blue:0.16, alpha:1.00),
                 font: UIFont = .boldSystemFont(ofSize: 15),
                 locale: Locale? = nil,
                 showCancelButton: Bool = true) {
@@ -120,7 +120,7 @@ open class DatePickerDialog: UIView {
             delay: 0,
             options: .curveEaseInOut,
             animations: {
-                self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
+                self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
                 self.dialogView!.layer.opacity = 1
                 self.dialogView!.layer.transform = CATransform3DMakeScale(1, 1, 1)
         }
@@ -171,15 +171,17 @@ open class DatePickerDialog: UIView {
                                                    height: dialogSize.height))
 
         // First, we style the dialog to match the iOS8 UIAlertView >>>
-        let gradient: CAGradientLayer = CAGradientLayer(layer: self.layer)
-        gradient.frame = container.bounds
-        gradient.colors = [UIColor(red: 218/255, green: 218/255, blue: 218/255, alpha: 1).cgColor,
-                           UIColor(red: 233/255, green: 233/255, blue: 233/255, alpha: 1).cgColor,
-                           UIColor(red: 218/255, green: 218/255, blue: 218/255, alpha: 1).cgColor]
+//        let gradient: CAGradientLayer = CAGradientLayer(layer: self.layer)
+//        gradient.frame = container.bounds
+//        gradient.colors = [UIColor(red: 218/255, green: 218/255, blue: 218/255, alpha: 1).cgColor,
+//                           UIColor(red: 233/255, green: 233/255, blue: 233/255, alpha: 1).cgColor,
+//                           UIColor(red: 218/255, green: 218/255, blue: 218/255, alpha: 1).cgColor]
 
         let cornerRadius = kCornerRadius
-        gradient.cornerRadius = cornerRadius
-        container.layer.insertSublayer(gradient, at: 0)
+//        gradient.cornerRadius = cornerRadius
+//        container.layer.insertSublayer(gradient, at: 0)
+        
+        container.backgroundColor = UIColor.init(white: 0.2, alpha: 0.95)
 
         container.layer.cornerRadius = cornerRadius
         container.layer.borderColor = UIColor(red: 198/255, green: 198/255, blue: 198/255, alpha: 1).cgColor

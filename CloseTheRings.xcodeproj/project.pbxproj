@@ -20,6 +20,7 @@
 		CDBDCC5620A44B7000CEEB9A /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC5520A44B6F00CEEB9A /* DatePickerDialog.swift */; };
 		CDBDCC5820A4564200CEEB9A /* Regift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC5720A4564200CEEB9A /* Regift.swift */; };
 		CDBDCC5A20A45A1F00CEEB9A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDBDCC5920A45A1F00CEEB9A /* Settings.bundle */; };
+		CDBDCC5C20A57BDD00CEEB9A /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC5B20A57BDD00CEEB9A /* IntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CDBDCC5520A44B6F00CEEB9A /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		CDBDCC5720A4564200CEEB9A /* Regift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regift.swift; sourceTree = "<group>"; };
 		CDBDCC5920A45A1F00CEEB9A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		CDBDCC5B20A57BDD00CEEB9A /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				CDBDCC5920A45A1F00CEEB9A /* Settings.bundle */,
 				CDBDCC3820A42E6D00CEEB9A /* HealthManager.swift */,
 				CDBDCC2620A42D7600CEEB9A /* Main.storyboard */,
+				CDBDCC5B20A57BDD00CEEB9A /* IntroViewController.swift */,
 				CDBDCC5720A4564200CEEB9A /* Regift.swift */,
 				CDBDCC4B20A43A6700CEEB9A /* RoundedButton.swift */,
 				CDBDCC2920A42D7700CEEB9A /* Assets.xcassets */,
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDBDCC5C20A57BDD00CEEB9A /* IntroViewController.swift in Sources */,
 				CDBDCC5820A4564200CEEB9A /* Regift.swift in Sources */,
 				CDBDCC4C20A43A6700CEEB9A /* RoundedButton.swift in Sources */,
 				CDBDCC2520A42D7600CEEB9A /* ViewController.swift in Sources */,

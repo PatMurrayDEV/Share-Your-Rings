@@ -51,7 +51,8 @@ static NSString *const GlimpseAssetWriterQueueName = @"com.Glimpse.asset.writer.
 
 - (NSURL *)createFileOutputURL
 {
-    NSString *documentDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//    NSString *documentDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentDirectory = NSTemporaryDirectory();
     NSTimeInterval timestamp    = [[NSDate date] timeIntervalSince1970];
     NSString *filename          = [NSString stringWithFormat:@"glimpse_%08x.mov", (int)timestamp];
     NSString *path              = [NSString stringWithFormat:@"%@/%@", documentDirectory, filename];
@@ -135,6 +136,8 @@ static NSString *const GlimpseAssetWriterQueueName = @"com.Glimpse.asset.writer.
 
     __block CVPixelBufferRef buffer = [self pixelBufferForImage:self.frameBuffer[0]];
     BOOL success = [self.adapter appendPixelBuffer:buffer withPresentationTime:kCMTimeZero];
+    
+    
     
     NSTimeInterval startTimeDiff    = [self.startDate timeIntervalSinceNow];
     NSTimeInterval endTimeDiff      = [self.endDate timeIntervalSinceNow];

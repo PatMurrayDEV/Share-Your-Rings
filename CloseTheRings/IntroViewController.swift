@@ -46,6 +46,10 @@ class IntroViewController: UIViewController {
         
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         
         let status = HealthManager.main.checkPermission()

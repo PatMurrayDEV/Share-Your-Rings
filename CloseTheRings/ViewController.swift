@@ -9,6 +9,7 @@
 import UIKit
 import HealthKitUI
 import AVFoundation
+import StoreKit
 
 class ViewController: UIViewController {
 
@@ -43,7 +44,23 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         displayRing()
         setDateLabel()
-        clearTempFolder()
+        clearTmpDir()
+        checkTip()
+    }
+    
+    @IBOutlet weak var tipHeart: UILabel!
+    
+    func checkTip() {
+        tipHeart.alpha = 0
+        guard let tipAmountString = KeychainSwift().get(kTipAmount) else {
+            return
+        }
+        guard let tipDouble = Double(tipAmountString) else {
+            return
+        }
+        if tipDouble > 0 {
+            self.tipHeart.alpha = 1
+        }
     }
     
     func displayRing() {
@@ -93,6 +110,7 @@ class ViewController: UIViewController {
                 self.videoButton.isUserInteractionEnabled = false
                 self.calendarButton.isUserInteractionEnabled = false
                 self.infoButton.isUserInteractionEnabled = false
+                self.tipHeart.alpha = 0
             } else {
                 self.gifButton.alpha = 1.0
                 self.videoButton.alpha  = 1.0
@@ -105,6 +123,7 @@ class ViewController: UIViewController {
                 self.videoButton.isUserInteractionEnabled = true
                 self.calendarButton.isUserInteractionEnabled = true
                 self.infoButton.isUserInteractionEnabled = true
+                checkTip()
             }
 //        }
         
@@ -130,6 +149,15 @@ class ViewController: UIViewController {
                             self.present(shareable, animated: true, completion: {
                                 self.recordingState(enter: false)
                             })
+                            shareable.completionWithItemsHandler = {(activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+                                if !completed {
+                                    // User canceled
+                                    return
+                                }
+                                // User completed activity
+                                SKStoreReviewController.requestReview()
+                                self.clearTmpDir()
+                            }
                         }
                     }
                     
@@ -160,6 +188,15 @@ class ViewController: UIViewController {
                         self.present(shareable, animated: true, completion: {
                             self.recordingState(enter: false)
                         })
+                        shareable.completionWithItemsHandler = {(activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+                            if !completed {
+                                // User canceled
+                                return
+                            }
+                            // User completed activity
+                            SKStoreReviewController.requestReview()
+                            self.clearTmpDir()
+                        }
                     }
                     
                     
@@ -176,44 +213,33 @@ class ViewController: UIViewController {
         
     }
     
-    func clearTempFolder() {
-        let fileNameToDelete = "myFileName.txt"
-        var filePath = ""
+//    SKStoreReviewController.requestReview()
+    
+    func clearTmpDir(){
         
-        // Fine documents directory on device
-        let dirs : [String] = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true)
-        
-        if dirs.count > 0 {
-            let dir = dirs[0] //documents directory
-            filePath = dir.appendingFormat("/" + fileNameToDelete)
-            print("Local path = \(filePath)")
-            
-        } else {
-            print("Could not find local directory to store file")
-            return
-        }
-        
-        
+        var removed: Int = 0
         do {
-            let fileManager = FileManager.default
-            
-            // Check if file exists
-            if fileManager.fileExists(atPath: filePath) {
-                // Delete file
-                try fileManager.removeItem(atPath: filePath)
-            } else {
-                print("File does not exist")
+            let tmpDirURL = URL(string: NSTemporaryDirectory())!
+            let tmpFiles = try FileManager.default.contentsOfDirectory(at: tmpDirURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+            print("\(tmpFiles.count) temporary files found")
+            for url in tmpFiles {
+                removed += 1
+                try FileManager.default.removeItem(at: url)
             }
-            
-        }
-        catch let error as NSError {
-            print("An error took place: \(error)")
+            print("\(removed) temporary files removed")
+        } catch {
+            print(error)
+            print("\(removed) temporary files removed")
         }
     }
+    
+    @IBAction func unwindToVC(segue:UIStoryboardSegue) { }
     
     
 
 }
+
+
 
 
 

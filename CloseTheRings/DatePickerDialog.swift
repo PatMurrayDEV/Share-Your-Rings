@@ -184,7 +184,7 @@ open class DatePickerDialog: UIView {
         container.backgroundColor = UIColor.init(white: 0.2, alpha: 0.95)
 
         container.layer.cornerRadius = cornerRadius
-        container.layer.borderColor = UIColor(red: 198/255, green: 198/255, blue: 198/255, alpha: 1).cgColor
+        container.layer.borderColor = UIColor(red:0.78, green:0.36, blue:0.16, alpha:1.00).cgColor
         container.layer.borderWidth = 1
         container.layer.shadowRadius = cornerRadius + 5
         container.layer.shadowOpacity = 0.1
@@ -199,7 +199,7 @@ open class DatePickerDialog: UIView {
                                             y: yPosition,
                                             width: container.bounds.size.width,
                                             height: kDefaultButtonSpacerHeight))
-        lineView.backgroundColor = UIColor(red: 198/255, green: 198/255, blue: 198/255, alpha: 1)
+        lineView.backgroundColor = UIColor(red:0.78, green:0.36, blue:0.16, alpha:1.00)
         container.addSubview(lineView)
 
         //Title

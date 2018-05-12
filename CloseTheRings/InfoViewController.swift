@@ -23,6 +23,7 @@ class InfoViewController: UIViewController {
     
     
     @IBAction func tipButtonTapped(_ sender: Any) {
+        SoundManager.playPop()
         setSpinner()
         self.purchase()
     }
@@ -52,12 +53,14 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func viewAppsTapped(_ sender: Any) {
+        SoundManager.playPop()
         if let url = URL(string: "https://itunes.apple.com/us/developer/patrick-murray/id406128112?uo=4"){
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
     
     @IBAction func nameTapped(_ sender: Any) {
+        SoundManager.playPop()
         if let url = URL(string: "https://patmurray.co"){
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
@@ -93,10 +96,12 @@ class InfoViewController: UIViewController {
     }
     func setProduct(product: SKProduct) {
         self.product = product
+        if self.viewIfLoaded?.window != nil {
         DispatchQueue.main.async { [unowned self] in
-            self.tipButton.setTitle("Tip for \(product.localizedPrice() ?? "$\(product.price)")", for: .normal)
-            self.spinner.stopAnimating()
-            self.tipButton.isUserInteractionEnabled = true
+                self.tipButton.setTitle("Tip for \(product.localizedPrice() ?? "$\(product.price)")", for: .normal)
+                self.spinner.stopAnimating()
+                self.tipButton.isUserInteractionEnabled = true
+            }
         }
         
     }
@@ -108,14 +113,15 @@ class InfoViewController: UIViewController {
                 self.purchaseSuccess()
                 print(identifier)
             }
+            self.getProducts()
         })
     }
     
     func purchaseSuccess() {
+        SoundManager.playWhistle()
         if let price = product?.price {
             self.saveTip(amount: price)
         }
-        self.getProducts()
     }
     
     func saveTip(amount: NSNumber) {

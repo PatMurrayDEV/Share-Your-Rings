@@ -10,6 +10,7 @@
 		CDB94CF920A5CD0D00D78F02 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB94CF820A5CD0D00D78F02 /* InfoViewController.swift */; };
 		CDB94CFB20A6544E00D78F02 /* PurcahaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB94CFA20A6544E00D78F02 /* PurcahaseHelper.swift */; };
 		CDB94CFD20A6552B00D78F02 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB94CFC20A6552B00D78F02 /* KeychainSwift.swift */; };
+		CDB94CFF20A6D9F900D78F02 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB94CFE20A6D9F900D78F02 /* SoundManager.swift */; };
 		CDBDCC2320A42D7600CEEB9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC2220A42D7600CEEB9A /* AppDelegate.swift */; };
 		CDBDCC2520A42D7600CEEB9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC2420A42D7600CEEB9A /* ViewController.swift */; };
 		CDBDCC2820A42D7600CEEB9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBDCC2620A42D7600CEEB9A /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		CDB94CF820A5CD0D00D78F02 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		CDB94CFA20A6544E00D78F02 /* PurcahaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurcahaseHelper.swift; sourceTree = "<group>"; };
 		CDB94CFC20A6552B00D78F02 /* KeychainSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
+		CDB94CFE20A6D9F900D78F02 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		CDBDCC1F20A42D7600CEEB9A /* CloseTheRings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloseTheRings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBDCC2220A42D7600CEEB9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDBDCC2420A42D7600CEEB9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				CDBDCC2E20A42D7700CEEB9A /* Info.plist */,
 				CDBDCC4D20A43CC900CEEB9A /* CloseTheRings-Bridging-Header.h */,
 				CDBDCC5420A43CCF00CEEB9A /* Glimpse */,
+				CDB94CFE20A6D9F900D78F02 /* SoundManager.swift */,
 			);
 			path = CloseTheRings;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				CDBDCC5820A4564200CEEB9A /* Regift.swift in Sources */,
 				CDBDCC4C20A43A6700CEEB9A /* RoundedButton.swift in Sources */,
 				CDBDCC2520A42D7600CEEB9A /* ViewController.swift in Sources */,
+				CDB94CFF20A6D9F900D78F02 /* SoundManager.swift in Sources */,
 				CDB94CF920A5CD0D00D78F02 /* InfoViewController.swift in Sources */,
 				CDBDCC3920A42E6D00CEEB9A /* HealthManager.swift in Sources */,
 				CDBDCC5320A43CCA00CEEB9A /* GlimpseAssetWriter.m in Sources */,

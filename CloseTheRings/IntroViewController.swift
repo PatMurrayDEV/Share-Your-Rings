@@ -32,11 +32,12 @@ class IntroViewController: UIViewController {
     }
     
     @IBAction func grantPermissionButtonTapped(_ sender: Any) {
-        
+        SoundManager.playPop()
         HealthManager.main.getPermission { (success, error) in
             if success {
                 HealthManager.main.setPermission()
                 DispatchQueue.main.async { [unowned self] in
+                    SoundManager.playWhistle()
                     self.performSegue(withIdentifier: "startApp", sender: self)
                 }
             } else {

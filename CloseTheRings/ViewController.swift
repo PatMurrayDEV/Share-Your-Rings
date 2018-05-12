@@ -74,7 +74,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dateButtonTapped(_ sender: Any) {
-        
+        SoundManager.playPop()
         DatePickerDialog().show("Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: self.date, minimumDate: nil, maximumDate: Date(), datePickerMode: .date) { (date) in
             if let dt = date {
                 self.date = dt
@@ -131,6 +131,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func gifButtonTapped(_ sender: Any) {
+        SoundManager.playPop()
         recordingState(enter: true, generating: "GIF")
         let glimpse = Glimpse()
         containerView.layer.borderColor = UIColor.clear.cgColor
@@ -148,6 +149,7 @@ class ViewController: UIViewController {
                             let shareable = UIActivityViewController(activityItems: items, applicationActivities: nil)
                             self.present(shareable, animated: true, completion: {
                                 self.recordingState(enter: false)
+                                SoundManager.playWhistle()
                             })
                             shareable.completionWithItemsHandler = {(activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
                                 if !completed {
@@ -175,6 +177,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
+        SoundManager.playPop()
         recordingState(enter: true, generating: "Video")
         let glimpse = Glimpse()
         containerView.layer.borderColor = UIColor.clear.cgColor
@@ -187,6 +190,7 @@ class ViewController: UIViewController {
                         let shareable = UIActivityViewController(activityItems: items, applicationActivities: nil)
                         self.present(shareable, animated: true, completion: {
                             self.recordingState(enter: false)
+                            SoundManager.playWhistle()
                         })
                         shareable.completionWithItemsHandler = {(activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
                             if !completed {

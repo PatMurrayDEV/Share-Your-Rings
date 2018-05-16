@@ -24,4 +24,17 @@ class RoundedButton: UIButton {
 
 }
 
+@IBDesignable
+class RotatedLabel: UILabel {
+    
+    override func awakeFromNib() {
+        let spareFrame = self.frame
+        self.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
+        self.frame = spareFrame
+    }
+    
+    
+    
+}
+
 

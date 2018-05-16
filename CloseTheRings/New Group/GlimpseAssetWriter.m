@@ -54,7 +54,7 @@ static NSString *const GlimpseAssetWriterQueueName = @"com.Glimpse.asset.writer.
 //    NSString *documentDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *documentDirectory = NSTemporaryDirectory();
     NSTimeInterval timestamp    = [[NSDate date] timeIntervalSince1970];
-    NSString *filename          = [NSString stringWithFormat:@"glimpse_%08x.mov", (int)timestamp];
+    NSString *filename          = [NSString stringWithFormat:@"rings_%08x.mov", (int)timestamp];
     NSString *path              = [NSString stringWithFormat:@"%@/%@", documentDirectory, filename];
     NSFileManager *fileManager  = [NSFileManager defaultManager];
     

@@ -19,18 +19,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rings" translatesAutoresizingMaskIntoConstraints="NO" id="ZVK-ON-IBB">
-                                <rect key="frame" x="100" y="245.5" width="175" height="175"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="gP3-oT-0pH">
+                                <rect key="frame" x="100" y="246" width="174" height="174"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZVK-ON-IBB" secondAttribute="height" multiplier="1:1" id="XAg-CF-uVI"/>
+                                    <constraint firstAttribute="width" secondItem="gP3-oT-0pH" secondAttribute="height" multiplier="1:1" id="mgO-fa-2q9"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZVK-ON-IBB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="A89-RC-kCd"/>
-                            <constraint firstItem="ZVK-ON-IBB" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hXP-lH-M2W"/>
-                            <constraint firstItem="ZVK-ON-IBB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="100" id="yJn-YZ-et8"/>
+                            <constraint firstItem="gP3-oT-0pH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="100" id="SsF-AS-ya6"/>
+                            <constraint firstItem="gP3-oT-0pH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="bPA-XM-VY0"/>
+                            <constraint firstItem="gP3-oT-0pH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="iu3-Bp-Ggp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -41,6 +41,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rings" width="1024" height="1024"/>
+        <image name="splash" width="3056" height="3056"/>
     </resources>
 </document>

@@ -23,6 +23,9 @@ typedef void(^GlimpseCompletedCallback)(NSURL *fileOuputURL);
 /// @name Main class for creating new and controlling recordings.
 ///--------------------------------------------------------------------------------------------------------
 
+@property (readwrite, nonatomic)    double      GlimpseFramesPerSecond;
+
+
 /**
  Starts recording a view and defines completion callback.
  

@@ -22,6 +22,7 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     
+    
     @IBAction func tipButtonTapped(_ sender: Any) {
         SoundManager.playPop()
         setSpinner()

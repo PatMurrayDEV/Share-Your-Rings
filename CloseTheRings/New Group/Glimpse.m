@@ -25,7 +25,6 @@
 
 @implementation Glimpse
 
-static double const GlimpseFramesPerSecond = 30.0;
 
 - (id)init
 {
@@ -49,14 +48,14 @@ static double const GlimpseFramesPerSecond = 30.0;
     self.writer.size = CGSizeMake(view.bounds.size.width - 3, view.bounds.size.height - 3);
     
 	
-	self.writer.framesPerSecond = GlimpseFramesPerSecond;
+	self.writer.framesPerSecond = _GlimpseFramesPerSecond;
 
     self.writer.startDate = [NSDate date];
     
     __weak typeof(self) weakSelf = self;
     _queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     _source = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, _queue);
-    dispatch_source_set_timer(_source, dispatch_time(DISPATCH_TIME_NOW, 0), (1.0/GlimpseFramesPerSecond) * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
+    dispatch_source_set_timer(_source, dispatch_time(DISPATCH_TIME_NOW, 0), (1.0/_GlimpseFramesPerSecond) * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
     dispatch_source_set_event_handler(_source, ^{
 
         dispatch_sync(dispatch_get_main_queue(), ^{

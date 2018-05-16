@@ -26,6 +26,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var loadingLabel: UILabel!
     @IBOutlet weak var infoButton: UIButton!
     
+    
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var greenLabel: UILabel!
+    @IBOutlet weak var blueLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -68,6 +73,7 @@ class ViewController: UIViewController {
             if success {
                 HealthManager.main.getTodayRing(date: self.date ,completion: { (summary) in
                     self.ringView.setActivitySummary(summary, animated: true)
+                    self.setPercentages()
                 })
             }
         }
@@ -83,6 +89,29 @@ class ViewController: UIViewController {
             }
         }
     
+        
+    }
+    
+    func setPercentages() {
+//        if UserDefaults.standard.bool(forKey: "EnablePercent") {
+            let percentFormatter            = NumberFormatter()
+            percentFormatter.numberStyle    = .percent
+            percentFormatter.multiplier     = 100
+            percentFormatter.minimumFractionDigits = 0
+            percentFormatter.maximumFractionDigits = 0
+            percentFormatter.percentSymbol = " %"
+            DispatchQueue.main.async { [unowned self] in
+                self.redLabel.text = percentFormatter.string(for: HealthManager.main.energyProgress)
+                self.greenLabel.text =  percentFormatter.string(for: HealthManager.main.exerciseProgress)
+                self.blueLabel.text = "\(Int(HealthManager.main.standProgress)) hr"
+            }
+//        } else {
+//            DispatchQueue.main.async { [unowned self] in
+//                self.redLabel.text = ""
+//                self.greenLabel.text = ""
+//                self.blueLabel.text = ""
+//            }
+//        }
         
     }
     
@@ -134,6 +163,12 @@ class ViewController: UIViewController {
         SoundManager.playPop()
         recordingState(enter: true, generating: "GIF")
         let glimpse = Glimpse()
+        let time = Int(HealthManager.main.time)
+        if time > 5 {
+            glimpse.glimpseFramesPerSecond = 15
+        } else {
+            glimpse.glimpseFramesPerSecond = 30
+        }
         containerView.layer.borderColor = UIColor.clear.cgColor
         HealthManager.main.getTodayRing(date: self.date, completion: { (summary) in
             DispatchQueue.main.async { [unowned self] in
@@ -165,7 +200,8 @@ class ViewController: UIViewController {
                     
                     
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+                
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(time), execute: {
                     glimpse.stop()
                 })
                 self.ringView.setActivitySummary(nil, animated: false)
@@ -180,6 +216,12 @@ class ViewController: UIViewController {
         SoundManager.playPop()
         recordingState(enter: true, generating: "Video")
         let glimpse = Glimpse()
+        let time = Int(HealthManager.main.time)
+        if time > 5 {
+            glimpse.glimpseFramesPerSecond = 15
+        } else {
+            glimpse.glimpseFramesPerSecond = 30
+        }
         containerView.layer.borderColor = UIColor.clear.cgColor
         HealthManager.main.getTodayRing(date: self.date, completion: { (summary) in
             DispatchQueue.main.async { [unowned self] in
@@ -205,7 +247,7 @@ class ViewController: UIViewController {
                     
                     
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(time), execute: {
                     glimpse.stop()
                 })
                 self.ringView.setActivitySummary(nil, animated: false)

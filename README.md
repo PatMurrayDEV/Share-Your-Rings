@@ -1,3 +1,16 @@
+<p align="center">
+  <img src="icon.png">
+</p>
+
+
+
+<p align="center">
+Share animated GIFs and Videos of your Activity Rings with your friends.<br/>
+Brag about how many loops each ring does.<br/>
+Show off in a more interesting way than just static images.<br/>
+</p>
+
+ 
 # Share Your Rings
 
 <p align="center">

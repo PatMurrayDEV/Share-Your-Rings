@@ -27,6 +27,6 @@ The changes distill down to:
 - **Don't share the app as-is without modification**. 
 - **Don't use any of my original art in your modifications and distributions**.
 
-If you have a health app and want to use this in the app, go ahead :) that woudl be awesome! If you want to build an app around this as the core, that also fine; but you'll need to come up with your own branding. 
+If you have a health app and want to use this in the app, go ahead :) that would be awesome! If you want to build an app around this as the core, that also fine; but you'll need to come up with your own branding. 
 
 Cheers!

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CDB94CF920A5CD0D00D78F02 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB94CF820A5CD0D00D78F02 /* InfoViewController.swift */; };
-		CDB94CFB20A6544E00D78F02 /* PurcahaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB94CFA20A6544E00D78F02 /* PurcahaseHelper.swift */; };
-		CDB94CFD20A6552B00D78F02 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB94CFC20A6552B00D78F02 /* KeychainSwift.swift */; };
 		CDB94CFF20A6D9F900D78F02 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB94CFE20A6D9F900D78F02 /* SoundManager.swift */; };
 		CDBDCC2320A42D7600CEEB9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC2220A42D7600CEEB9A /* AppDelegate.swift */; };
 		CDBDCC2520A42D7600CEEB9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBDCC2420A42D7600CEEB9A /* ViewController.swift */; };
@@ -29,8 +27,6 @@
 
 /* Begin PBXFileReference section */
 		CDB94CF820A5CD0D00D78F02 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		CDB94CFA20A6544E00D78F02 /* PurcahaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurcahaseHelper.swift; sourceTree = "<group>"; };
-		CDB94CFC20A6552B00D78F02 /* KeychainSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
 		CDB94CFE20A6D9F900D78F02 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		CDBDCC1F20A42D7600CEEB9A /* CloseTheRings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloseTheRings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBDCC2220A42D7600CEEB9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +62,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD7F78FD20F05A850023023A /* Video Code */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDCC5720A4564200CEEB9A /* Regift.swift */,
+				CDBDCC5420A43CCF00CEEB9A /* Glimpse */,
+			);
+			path = "Video Code";
+			sourceTree = "<group>";
+		};
+		CD7F78FE20F05A920023023A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDCC2420A42D7600CEEB9A /* ViewController.swift */,
+				CDB94CF820A5CD0D00D78F02 /* InfoViewController.swift */,
+				CDBDCC5B20A57BDD00CEEB9A /* IntroViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CD7F78FF20F05AB40023023A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDCC2620A42D7600CEEB9A /* Main.storyboard */,
+				CDBDCC2B20A42D7700CEEB9A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CD7F790020F05ACB0023023A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDCC3820A42E6D00CEEB9A /* HealthManager.swift */,
+				CDBDCC5520A44B6F00CEEB9A /* DatePickerDialog.swift */,
+				CDBDCC4B20A43A6700CEEB9A /* RoundedButton.swift */,
+				CDB94CFE20A6D9F900D78F02 /* SoundManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CD7F790120F05AF20023023A /* Other Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDCC5920A45A1F00CEEB9A /* Settings.bundle */,
+				CDBDCC2920A42D7700CEEB9A /* Assets.xcassets */,
+				CDBDCC2E20A42D7700CEEB9A /* Info.plist */,
+			);
+			path = "Other Resources";
+			sourceTree = "<group>";
+		};
 		CDBDCC1620A42D7600CEEB9A = {
 			isa = PBXGroup;
 			children = (
@@ -86,25 +131,14 @@
 		CDBDCC2120A42D7600CEEB9A /* CloseTheRings */ = {
 			isa = PBXGroup;
 			children = (
-				CDBDCC5520A44B6F00CEEB9A /* DatePickerDialog.swift */,
-				CDBDCC3420A42E1B00CEEB9A /* CloseTheRings.entitlements */,
 				CDBDCC2220A42D7600CEEB9A /* AppDelegate.swift */,
-				CDBDCC2420A42D7600CEEB9A /* ViewController.swift */,
-				CDB94CFC20A6552B00D78F02 /* KeychainSwift.swift */,
-				CDBDCC5920A45A1F00CEEB9A /* Settings.bundle */,
-				CDBDCC3820A42E6D00CEEB9A /* HealthManager.swift */,
-				CDBDCC2620A42D7600CEEB9A /* Main.storyboard */,
-				CDB94CF820A5CD0D00D78F02 /* InfoViewController.swift */,
-				CDB94CFA20A6544E00D78F02 /* PurcahaseHelper.swift */,
-				CDBDCC5B20A57BDD00CEEB9A /* IntroViewController.swift */,
-				CDBDCC5720A4564200CEEB9A /* Regift.swift */,
-				CDBDCC4B20A43A6700CEEB9A /* RoundedButton.swift */,
-				CDBDCC2920A42D7700CEEB9A /* Assets.xcassets */,
-				CDBDCC2B20A42D7700CEEB9A /* LaunchScreen.storyboard */,
-				CDBDCC2E20A42D7700CEEB9A /* Info.plist */,
+				CD7F790120F05AF20023023A /* Other Resources */,
+				CD7F78FE20F05A920023023A /* View Controllers */,
+				CD7F78FF20F05AB40023023A /* Storyboards */,
+				CD7F78FD20F05A850023023A /* Video Code */,
+				CD7F790020F05ACB0023023A /* Helpers */,
+				CDBDCC3420A42E1B00CEEB9A /* CloseTheRings.entitlements */,
 				CDBDCC4D20A43CC900CEEB9A /* CloseTheRings-Bridging-Header.h */,
-				CDBDCC5420A43CCF00CEEB9A /* Glimpse */,
-				CDB94CFE20A6D9F900D78F02 /* SoundManager.swift */,
 			);
 			path = CloseTheRings;
 			sourceTree = "<group>";
@@ -215,11 +249,9 @@
 				CDB94CF920A5CD0D00D78F02 /* InfoViewController.swift in Sources */,
 				CDBDCC3920A42E6D00CEEB9A /* HealthManager.swift in Sources */,
 				CDBDCC5320A43CCA00CEEB9A /* GlimpseAssetWriter.m in Sources */,
-				CDB94CFB20A6544E00D78F02 /* PurcahaseHelper.swift in Sources */,
 				CDBDCC5220A43CCA00CEEB9A /* Glimpse.m in Sources */,
 				CDBDCC5620A44B7000CEEB9A /* DatePickerDialog.swift in Sources */,
 				CDBDCC2320A42D7600CEEB9A /* AppDelegate.swift in Sources */,
-				CDB94CFD20A6552B00D78F02 /* KeychainSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +399,7 @@
 				CODE_SIGN_ENTITLEMENTS = CloseTheRings/CloseTheRings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CC3KAA4FP8;
-				INFOPLIST_FILE = CloseTheRings/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CloseTheRings/Other Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,7 +421,7 @@
 				CODE_SIGN_ENTITLEMENTS = CloseTheRings/CloseTheRings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CC3KAA4FP8;
-				INFOPLIST_FILE = CloseTheRings/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CloseTheRings/Other Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

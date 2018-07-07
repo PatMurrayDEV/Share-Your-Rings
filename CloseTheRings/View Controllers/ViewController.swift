@@ -50,23 +50,8 @@ class ViewController: UIViewController {
         displayRing()
         setDateLabel()
         clearTmpDir()
-        checkTip()
     }
-    
-    @IBOutlet weak var tipHeart: UILabel!
-    
-    func checkTip() {
-        tipHeart.alpha = 0
-        guard let tipAmountString = KeychainSwift().get(kTipAmount) else {
-            return
-        }
-        guard let tipDouble = Double(tipAmountString) else {
-            return
-        }
-        if tipDouble > 0 {
-            self.tipHeart.alpha = 1
-        }
-    }
+
     
     func displayRing() {
         HealthManager.main.getPermission { (success, error) in
@@ -139,7 +124,6 @@ class ViewController: UIViewController {
                 self.videoButton.isUserInteractionEnabled = false
                 self.calendarButton.isUserInteractionEnabled = false
                 self.infoButton.isUserInteractionEnabled = false
-                self.tipHeart.alpha = 0
             } else {
                 self.gifButton.alpha = 1.0
                 self.videoButton.alpha  = 1.0
@@ -152,7 +136,6 @@ class ViewController: UIViewController {
                 self.videoButton.isUserInteractionEnabled = true
                 self.calendarButton.isUserInteractionEnabled = true
                 self.infoButton.isUserInteractionEnabled = true
-                checkTip()
             }
 //        }
         

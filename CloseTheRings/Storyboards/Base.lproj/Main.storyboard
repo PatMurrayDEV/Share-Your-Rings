@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QPv-ZK-iz9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QPv-ZK-iz9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -146,22 +146,12 @@
                                     <segue destination="75M-19-Pf9" kind="presentation" modalTransitionStyle="crossDissolve" id="BJx-2F-0gb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 🧡" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYl-xC-g9W">
-                                <rect key="frame" x="76" y="36" width="41" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="6xE-C6-QvD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.9767052531" green="0.60546392199999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4ST-j4-vKc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3AL-Mh-ZRY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cC0-Nf-cwE" secondAttribute="bottom" constant="20" id="GtF-a2-ZUq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cC0-Nf-cwE" secondAttribute="trailing" constant="20" id="J7D-m7-KR0"/>
-                            <constraint firstItem="a3R-qf-gBs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FYl-xC-g9W" secondAttribute="trailing" constant="8" id="XLv-2S-JgI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZMH-Qo-dv9" secondAttribute="trailing" constant="8" id="adA-wq-OU8"/>
                             <constraint firstItem="Ic3-Ht-tgH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="axx-w5-IAi"/>
                             <constraint firstItem="cC0-Nf-cwE" firstAttribute="top" secondItem="4ST-j4-vKc" secondAttribute="bottom" constant="29" id="dYd-B2-uBX"/>
@@ -169,11 +159,9 @@
                             <constraint firstItem="Ic3-Ht-tgH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fpu-tX-qHG"/>
                             <constraint firstItem="ZMH-Qo-dv9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gi9-hD-lCI"/>
                             <constraint firstItem="a3R-qf-gBs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="hZa-db-GKp"/>
-                            <constraint firstItem="FYl-xC-g9W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="oFG-xm-8O5"/>
                             <constraint firstItem="ZMH-Qo-dv9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pTB-oB-TyM"/>
                             <constraint firstItem="cC0-Nf-cwE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="s7C-Mj-n1S"/>
                             <constraint firstItem="ZMH-Qo-dv9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="uTP-eS-R9a"/>
-                            <constraint firstItem="FYl-xC-g9W" firstAttribute="leading" secondItem="Ic3-Ht-tgH" secondAttribute="trailing" id="x8X-FA-fqo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -189,7 +177,6 @@
                         <outlet property="loadingLabel" destination="irL-Kl-63q" id="2D4-qK-JZh"/>
                         <outlet property="redLabel" destination="PMm-UF-Vsq" id="HwU-4Y-ZWb"/>
                         <outlet property="ringView" destination="J2n-UU-fJC" id="KfR-gI-hOr"/>
-                        <outlet property="tipHeart" destination="FYl-xC-g9W" id="ynm-jt-wtd"/>
                         <outlet property="videoButton" destination="02W-e9-SgL" id="tCL-KW-2fr"/>
                     </connections>
                 </viewController>
@@ -349,64 +336,24 @@ Share Your Rings</string>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you love this app, you can show your appreciation by tipping or trying out some of my other apps." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVn-XM-Yzb">
-                                        <rect key="frame" x="0.0" y="170.5" width="335" height="61"/>
+                                        <rect key="frame" x="0.0" y="204" width="335" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OqS-um-ywg">
-                                        <rect key="frame" x="0.0" y="309" width="335" height="160.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have tipped a total of $10.99 🧡" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bku-MO-ODN">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.9767052531" green="0.60546392199999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97u-YJ-QPi">
-                                                <rect key="frame" x="0.0" y="30.5" width="335" height="60"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyU-0b-m6w" customClass="RoundedButton" customModule="CloseTheRings" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
-                                                        <color key="backgroundColor" red="0.9767052531" green="0.60546392199999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <state key="normal" title="Tip for $3">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="tipButtonTapped:" destination="75M-19-Pf9" eventType="touchUpInside" id="h53-DJ-BwL"/>
-                                                        </connections>
-                                                    </button>
-                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="GpT-73-BqJ">
-                                                        <rect key="frame" x="158" y="20" width="20" height="20"/>
-                                                    </activityIndicatorView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="GpT-73-BqJ" firstAttribute="centerY" secondItem="97u-YJ-QPi" secondAttribute="centerY" id="4Gd-pu-jMI"/>
-                                                    <constraint firstItem="GpT-73-BqJ" firstAttribute="centerX" secondItem="97u-YJ-QPi" secondAttribute="centerX" id="7t1-MQ-Ckn"/>
-                                                    <constraint firstItem="MyU-0b-m6w" firstAttribute="leading" secondItem="97u-YJ-QPi" secondAttribute="leading" id="OmK-9R-9QZ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="MyU-0b-m6w" secondAttribute="trailing" id="ist-Sd-Ce8"/>
-                                                    <constraint firstItem="MyU-0b-m6w" firstAttribute="top" secondItem="97u-YJ-QPi" secondAttribute="top" id="oSi-Df-dUH"/>
-                                                    <constraint firstAttribute="bottom" secondItem="MyU-0b-m6w" secondAttribute="bottom" id="rSJ-gl-Uku"/>
-                                                    <constraint firstAttribute="height" constant="60" id="w9e-fb-Oqe"/>
-                                                </constraints>
-                                            </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJc-LH-wch" customClass="RoundedButton" customModule="CloseTheRings" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="100.5" width="335" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="5lA-43-Xsb"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="View Apps">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="viewAppsTapped:" destination="75M-19-Pf9" eventType="touchUpInside" id="2Mh-01-d8l"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJc-LH-wch" customClass="RoundedButton" customModule="CloseTheRings" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="376" width="335" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="5lA-43-Xsb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="View Apps">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="viewAppsTapped:" destination="75M-19-Pf9" eventType="touchUpInside" id="2Mh-01-d8l"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tbR-Fs-RYp">
                                         <rect key="frame" x="0.0" y="547" width="335" height="60"/>
                                         <subviews>
@@ -439,9 +386,6 @@ Share Your Rings</string>
                     </view>
                     <connections>
                         <outlet property="madeByLabel" destination="7e4-wR-SVI" id="Beh-0X-BPc"/>
-                        <outlet property="spinner" destination="GpT-73-BqJ" id="7pH-U2-Dkx"/>
-                        <outlet property="tipButton" destination="MyU-0b-m6w" id="K0y-h8-0Dg"/>
-                        <outlet property="totalTippedLabel" destination="bku-MO-ODN" id="1vh-2b-Ifc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Bk-96-9ua" userLabel="First Responder" sceneMemberID="firstResponder"/>
